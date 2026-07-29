@@ -1,0 +1,58 @@
+# Inbox Zero preferences — copy to inbox-zero.preferences.yaml
+# and adjust. Paths the agent should check: workspace root, home, or this skill dir.
+
+user_preferences:
+  escalation:
+    security_alerts: immediate
+    customer_complaints: immediate
+    executive_emails: immediate
+    financial_approvals: immediate
+    legal: immediate
+    newsletters: none
+    linkedin: none
+    marketing: none
+
+  automation:
+    archive_newsletters: true
+    categorize_notifications: true
+    create_tasks: true
+    draft_replies: true
+    send_replies: false
+    send_acknowledgments: false
+    add_calendar_events: true
+    delete: false
+    unsubscribe: suggest_only
+
+  important_contacts:
+    # - ceo@company.com
+    # - accountant@example.com
+
+  important_domains:
+    # - important-customer.com
+
+  never_notify_senders:
+    # - notifications@linkedin.com
+
+  always_archive_intents:
+    - newsletter
+    - marketing
+
+  work_hours:
+    timezone: America/Los_Angeles
+    notify_only_during:
+      - "08:00-18:00"
+    # Critical security / outage / financial still notify outside hours unless set false
+    critical_overrides_work_hours: true
+
+  drafting:
+    tone: concise_professional
+    # Optional path to sent-mail samples for voice matching
+    # voice_samples: []
+
+  labels:
+    critical: "Priority/Critical"
+    high: "Priority/High"
+    medium: "Priority/Medium"
+    low: "Priority/Low"
+    newsletter: "Newsletters"
+    notification: "Notifications"
